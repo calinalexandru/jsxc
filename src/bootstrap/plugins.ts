@@ -3,6 +3,7 @@ import OTRPlugin from '../plugins/otr/Plugin'
 import ReceiptPlugin from '../plugins/MessageDeliveryReceiptsPlugin'
 import NotificationPlugin from '../plugins/Notification'
 import MeCommandPlugin from '../plugins/MeCommandPlugin'
+import KickCommandPlugin from '../plugins/KickCommandPlugin'
 import MessageArchiveManagementPlugin from '../plugins/mam/Plugin'
 import ChatStatePlugin from '../plugins/chatState/ChatStatePlugin'
 import HttpUploadPlugin from '../plugins/httpUpload/HttpUploadPlugin'
@@ -16,6 +17,7 @@ Client.addPlugin(OMEMOPlugin);
 Client.addPlugin(ReceiptPlugin);
 Client.addPlugin(NotificationPlugin);
 Client.addPlugin(MeCommandPlugin);
+Client.addPlugin(KickCommandPlugin);
 Client.addPlugin(MessageArchiveManagementPlugin);
 Client.addPlugin(ChatStatePlugin);
 Client.addPlugin(HttpUploadPlugin);

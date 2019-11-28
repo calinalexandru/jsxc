@@ -257,7 +257,16 @@ export default class Message implements IIdentifiable, IMessage {
    }
 
    public async getProcessedBody(): Promise<string> {
-      let body = this.getPlaintextMessage();
+      let body: any = this.getPlaintextMessage();
+      let bodyOrig: any = body;
+      try {
+         body = JSON.parse(body);
+         if (body.text) {
+            body = body.text;
+         }
+      } catch (e) {
+         body = bodyOrig;
+      }
 
       body = Utils.escapeHTML(body);
       body = await Message.formatText(body, this.getDirection(), this.getPeer());
